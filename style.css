@@ -1,0 +1,320 @@
+:root {
+    --clr-primaty: #002395;
+    --clr-2: #ED2939;
+    --clr-3: #D5E2F0;
+    --clr-4: #333333;
+    --clr-5: #474747;
+    --clr-6: #888888;
+}
+@font-face {
+    font-family: 'paris2024';
+    src: url(05-fonts/Paris2024/Paris2024-Variable.ttf);
+}
+@font-face {
+    font-family: 'popins-reg';
+    src: url(05-fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'popins-Thin';
+    src: url(05-fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+    font-family: 'popins-l';
+    src: url(05-fonts/Poppins/Poppins-Light.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+h1 {
+    font-family: 'paris2024';
+    font-size: 65px;
+}
+h2 {
+    font-family: 'popins-Thin';
+}
+h3 {
+    font-family: 'popins-Thin';
+}
+p {
+    font-family: 'popins-l';
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'popins-reg';
+}
+.p-5 {
+    padding: 50px;
+}
+.text-center {
+    text-align: center;
+}
+nav {
+    width: 100%;
+    background-color: #ffffff;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    gap: 30%;
+    padding: 10px 20px;
+}
+.mobile-nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.mobile-nav a {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    font-family: 'popins-reg';
+    color: var(--clr-4);
+}
+.mobile-nav.show {
+    max-height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nav-link {
+    gap: 100px;
+    display: flex;
+}
+.burger {
+    display: none;
+}
+.bck {
+    width: 100vw;
+    height: 890px;
+    background-image: url(03-images/hero-lg.png);
+    background-size: cover;
+    background-position: center;
+}
+.mask {
+    width: 100%;
+    display: block;
+    margin-top: 200px;
+}
+.info {
+    color: white;
+}
+.btn {
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--clr-4);   
+    gap: 15px;
+}
+.bin {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.6;
+}
+.bin-active {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+}
+.clickme {
+    align-items: center;
+    gap: 15px;
+    justify-content: end;
+}
+.time {
+    font-size: 90px; 
+    font-family: 'paris2024';
+}
+.road {
+    padding: 50px;
+    background-color: var(--clr-3);
+}
+.card {
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.card-info {
+    padding: 5px;
+    background-color: white;
+}
+.cards {
+    margin-top: 25px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    margin-top: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(126, 126, 126);
+}
+.partn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 45px;
+}
+.partn img:hover {
+    scale: 1.1;
+}
+.Partners {
+    justify-content: center;
+    display: flex;
+}
+.clickme-logo {
+    display: none;
+}
+footer {
+    margin-top: 150px;
+    width: 100%;
+    height: 700px;
+    background-color: var(--clr-5);
+    display: flex;
+    padding: 100px 100px;
+    flex-wrap: wrap;
+}
+.links1 {
+    display: block;
+    width: 50%;
+}
+.links2 {
+    display: block;
+}
+.logo2 {
+    width: 100%;
+}
+@media (max-width: 500px) {
+    .time {
+        font-size: 60px;
+    }
+    .mask img {
+        width: 100%;
+    }
+    .btn {
+        display: none;
+    }
+    .copyright {
+        margin-top: 0px;
+    }
+    .logo2 {
+        height: 20px;
+    }
+    footer {
+        height: 750px;
+    }
+    .links1 {
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    .nav-link {
+        display: none;
+    }
+    .partn {
+        padding-right: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .clickme-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+@media (max-width: 700px) {
+    .burger {
+        display: flex;
+        margin: auto;
+        padding-left: 10%;
+    }
+}
+@media (max-width: 650px) {
+    .card-2 {
+        display: none;
+    }
+}
+@media (max-width: 380px) {
+    .burger {
+        display: flex;
+        margin: auto;
+        padding-left: 1%;
+    }
+}
+@media (max-width: 990px) {
+    .card-3 {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .partn {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .clickme-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .l15, .l14 {
+        visibility: hidden !important;
+        display: none !important;
+    }
+}
+@media (max-width: 1300px) {
+    .burger {
+        display: flex;
+        margin: auto;
+        padding-left: 40%;
+    }
+    .nav-link {
+        display: none;
+    }
+    .card-4 {
+        display: none;
+    }
+}
